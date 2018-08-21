@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public static final String LOG_TAG = MainActivity.class.getName();
 
     private static final String GUARDIAN_REQUEST_URL =
-            "https://content.guardianapis.com/search?from-date=2017-01-01&order-by=newest&use-date=published&q=bitcoin&api-key=63df1762-ccb4-4774-b499-7bee73041bf8";
-
+//            "https://content.guardianapis.com/search?from-date=2017-01-01&order-by=newest&use-date=published&q=bitcoin&api-key=63df1762-ccb4-4774-b499-7bee73041bf8";
+            "https://content.guardianapis.com/search?order-by=newest&use-date=published&show-tags=contributor&q=bitcoin&api-key=63df1762-ccb4-4774-b499-7bee73041bf8";
     private ArticleAdapter mAdapter;
 
     private static final int ARTICLE_LOADER_ID = 1;
@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 startActivity(websiteIntent);
             }
         });
-
 
     }
 

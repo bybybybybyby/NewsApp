@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.support.v4.content.ContextCompat;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class ArticleAdapter extends ArrayAdapter<Article> {
@@ -40,12 +42,11 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
         TextView author = (TextView) convertView.findViewById(R.id.author_text_view);
         author.setText(currentArticle.getAuthor());
 
+        // Find the TextView with the date
+        TextView date = (TextView) convertView.findViewById(R.id.date_text_view);
+        date.setText(currentArticle.getDate());
+
         return convertView;
-
     }
-
-
-
-
 
 }

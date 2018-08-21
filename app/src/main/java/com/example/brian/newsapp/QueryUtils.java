@@ -58,7 +58,6 @@ public final class QueryUtils {
 
             // Extract the JSONArray associated with the key called "results",
             // which represents a list of articles).
-//            JSONArray articleArray = baseJsonResponse.getJSONArray("results");
             JSONObject articleBase = baseJsonResponse.getJSONObject("response");
             JSONArray articleArray = articleBase.getJSONArray("results");
 
@@ -68,25 +67,23 @@ public final class QueryUtils {
                 // Get a single article at position i within the list of articles
                 JSONObject currentArticle = articleArray.getJSONObject(i);
 
-//                // For a given article, extract the JSONObject associated with the
-//                // key called "properties", which represents a list of all properties
-//                // for that earthquake.
-//                JSONObject properties = currentArticle.getJSONArray("results");
-  //              JSONArray results = currentArticle.getJSONArray("results");
-
-                // Extract the value for the key called "webTitle"
-//                String title = currentArticle.getString("webTitle");
-//                String section = currentArticle.getString("sectionName");
-//                String author = currentArticle.getString("webTitle");
                 String title = currentArticle.getString("webTitle");
                 String section = currentArticle.getString("sectionName");
-                String author = currentArticle.getString("webTitle");
                 String url = currentArticle.getString("webUrl");
+                String date = currentArticle.getString("webPublicationDate");
+                date = date.substring(0,10);
+
+                JSONArray tagsArray = currentArticle.getJSONArray("tags");
+                String author = "";
+                if (tagsArray!=null && tagsArray.length()>0) {
+                    JSONObject authorTag = (JSONObject) tagsArray.get(0);
+                    author = authorTag.getString("webTitle");
+                }
 
 
                 // Create a new {@link Article} object with the title, section,
                 // and author from the JSON response.
-                Article article = new Article(title, section, author, url);
+                Article article = new Article(title, section, author, url, date);
 
                 // Add the new {@link Article} to the list of articles.
                 articles.add(article);
