@@ -32,15 +32,16 @@
             android:gravity="right"
             android:paddingRight="8dp"
             android:maxLines="2"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="16sp"
-            tools:text="Jan 5, 2018" />
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:text="2018-01-31" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/author_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="14sp"
         tools:text="Author"/>
 
     <TextView
@@ -51,7 +52,7 @@
         android:ellipsize="end"
         android:maxLines="2"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="16sp"
+        android:textSize="18sp"
         tools:text="Title" />
 
 
