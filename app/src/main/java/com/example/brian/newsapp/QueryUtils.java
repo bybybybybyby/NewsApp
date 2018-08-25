@@ -80,7 +80,6 @@ public final class QueryUtils {
                     author = authorTag.getString("webTitle");
                 }
 
-
                 // Create a new {@link Article} object with the title, section,
                 // and author from the JSON response.
                 Article article = new Article(title, section, author, url, date);
@@ -99,7 +98,6 @@ public final class QueryUtils {
         // Return the list of articles
         return articles;
     }
-
 
     /**
      * Returns new URL object from the given string URL.
@@ -143,7 +141,7 @@ public final class QueryUtils {
                 Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e(LOG_TAG, "Problem retrieving the earthquake JSON results.", e);
+            Log.e(LOG_TAG, "Problem retrieving the JSON results for the Guardian articles.", e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();

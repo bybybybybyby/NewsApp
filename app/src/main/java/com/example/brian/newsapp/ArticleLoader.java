@@ -1,12 +1,7 @@
 package com.example.brian.newsapp;
 
-
 import android.content.Context;
-//import android.support.v4.content.AsyncTaskLoader;
 import android.content.AsyncTaskLoader;
-
-import com.example.brian.newsapp.Article;
-import com.example.brian.newsapp.QueryUtils;
 
 import java.util.List;
 

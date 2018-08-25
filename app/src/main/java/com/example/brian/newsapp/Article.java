@@ -16,19 +16,6 @@ public class Article {
         mDate = date;
     }
 
-//    public Article(String title, String section, String author, String url) {
-//        mTitle = title;
-//        mSection = section;
-//        mAuthor = author;
-//        mUrl = url;
-//    }
-//
-//    public Article(String title, String section, String url) {
-//        mTitle = title;
-//        mSection = section;
-//        mUrl = url;
-//    }
-
     public String getTitle() { return mTitle; }
     public String getSection() { return mSection; }
     public String getAuthor() { return mAuthor; }
