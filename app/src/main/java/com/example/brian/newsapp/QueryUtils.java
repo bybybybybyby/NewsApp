@@ -192,7 +192,7 @@ public final class QueryUtils {
         // Extract relevant fields from the JSON response and create a list of {@link Article}s
         List<Article> articles = extractFeatureFromJson(jsonResponse);
 
-        // Return the list of {@link Earthquake}s
+        // Return the list of {@link Article}s
         return articles;
     }
 
